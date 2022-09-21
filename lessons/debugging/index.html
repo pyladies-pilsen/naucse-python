@@ -1,0 +1,129 @@
+<h1 id="hledani_chyb">Hledání chyb
+<a href="#header-hledani_chyb" class="header-link">#</a>
+</h1>
+<p>Jednou z klíčových vlastností vývojáře je umět najít a opravit defekt v programu. V programátorské hantýrce se tento proces nazývá jako <em>debugging</em>. Takový defekt (<strong>bug</strong>) totiž nutně nemusí být na první pohled vidět, dokonce nám ani nemusí způsobit výjimku, ale způsobí, že se náš program za určitých podmínek začne chovat nestandardně. Nestandardní chování programu pak může mít různě závažné důsledky.</p>
+<p>Typický postup při debuggingu je následující:</p>
+<ol>
+<li><strong>Zjistím</strong>, že v programu mám bug.</li>
+<li><strong>Najdu</strong>, na kterém místě v programu se bug nachází.</li>
+<li><strong>Opravím</strong> bug.</li>
+<li><strong>Otestuji</strong>, že program již funguje správně.</li>
+</ol>
+<p>Jeden z prvních nástrojů, který nám pomohl identifikovat, co máme v programu špatně, byla nezachycená výjimka a její popisná zpráva. <a href="naucse:page?lesson=beginners/print">Jak číst chyby</a> jsme probírali již v první lekci.</p>
+<h2 id="ladici_vypisy">Ladící výpisy
+<a href="#header-ladici_vypisy" class="header-link">#</a>
+</h2>
+<p>Další nástroj, se kterým jsi už určitě sama debuggovala, je funkce <code>print</code>. Funkce <code>print</code> je jednoduchá a rychlá metoda, jak získat náhled do toho, co se v programu děje. Tomuto vypisování dodatečných informací se říká <em>ladící výpisy</em>. Ty slouží čistě k tomu, aby nám umožnily pochopit kde přesně bug je a čím je způsoben. Obzvláště pokud je pro ladící výpisy použita funkce <code>print</code>, tyto výpisy by měly být odstraněny před používáním programu uživatelem. Zprávy z ladících výpisů nejsou pro běžného uživatele přínosné a tím pádem zhoršují použitelnost a čitelnost výstupu programu.
+Ukažme si to na následujícím programu, který od uživatele načte číslo, přičte k němu jedničku, vynásobí výsledek dvěmi a nakonec od něj odečte pětku. Výsledek vypíše uživateli.</p>
+<div class="highlight"><pre><span></span><span class="n">cislo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Zadej číslo:&quot;</span><span class="p">))</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Výsledek je:&quot;</span><span class="p">,</span> <span class="n">cislo</span><span class="p">)</span>
+</pre></div><p>Jak možná vidíš výpočet neprobíhá úplně správně. Pojďme si to odladit ladícím výpisem.</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Načítám číslo od uživatele&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Zadej číslo:&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zadané čislo je:&quot;</span><span class="p">,</span> <span class="n">cislo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Přičítám jedničku&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Po přičtení jedničky je hodnota:&quot;</span><span class="p">,</span> <span class="n">cislo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Násobím dvěmi&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Po vynásobení dvěmi je hodnota:&quot;</span><span class="p">,</span> <span class="n">cislo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odečítám pětku&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Po odečtení 5 je výsledek:&quot;</span><span class="p">,</span> <span class="n">cislo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Výsledek je:&quot;</span><span class="p">,</span> <span class="n">cislo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Konec programu&quot;</span><span class="p">)</span>
+</pre></div><p>Pro číslo <code>5</code> získáme následující výstup:</p>
+<div class="highlight"><pre><code>Načítám číslo od uživatele
+Zadej číslo:5
+Zadané čislo je: 5
+Přičítám jedničku
+Po přičtení jedničky je hodnota: 6
+Násobím dvěmi
+Po vynásobení dvěmi je hodnota: 36
+Odečítám pětku
+Po odečtení 5 je výsledek: 31
+Výsledek je: 31 .
+Konec programu</code></pre></div><p>Z výpisu lze sice poznat, že chyba je v násobení dvěmi, nicméně program v takovém stavu nemůžu předat uživateli. Uživatele zajímá pouze výsledek a nikoliv mezivýpočty. To pro uživatele představuje zbytečné informace, ve kterých musí výsledek hledat.</p>
+<p>Ladící výpisy také mohou prozradit citlivá data, tedy data, se kterými sice náš program potřebuje pracovat, ale uživateli by je prozradit neměl a proto musíme dávat pozor, abychom je důkladně promazali.</p>
+<h2 id="logovani">Logování
+<a href="#header-logovani" class="header-link">#</a>
+</h2>
+<p>Abychom neustále nemuseli myslet na mazání ladících printů a při každé chybě je vracet zase zpět, nabízí se zapisovat zprávy do souboru, tzv. <strong>logu</strong>. To nám umožňuje i výpisy uchovávat a vrátit se k nim, když problém zjistíme později. Nebo nám je může uživatel snadno zaslat a my vidíme, co se u uživatele dělo. Python nám za tímto účelem poskytuje šikovný modul <code>logging</code>, který se za nás postará o zapisování do souboru. Zároveň mu můžeme říct, aby nám ukládal jen důležité zprávy a zbytek ignoroval.</p>
+<p>Pojďme se podívat na možnou důležitost (<strong>level</strong>) zpráv a na co se daná důležistost (<strong>level</strong>) hodí.</p>
+<ul>
+<li><strong>CRITICAL</strong> = závažná chyba v programu, program dále nemusí fungovat</li>
+<li><strong>ERROR</strong> = kvůli závažnější chybě program nemohl dokončit některou operaci</li>
+<li><strong>WARNING</strong> = oznámení, že se děje něco, kvůli čemu program může přestat fungovat (např. dochází místo na disku), program ale doposud funguje dle očekávání</li>
+<li><strong>INFO</strong> = potvrzení, že program funguje dle očekávání</li>
+<li><strong>DEBUG</strong> = detailní informace o tom, co se v programu děje, potřebné pro diagnostiku problémů</li>
+</ul>
+<p>Důležitost je seřazena od nejvyšší po nejnižší.</p>
+<p>Základní použití tohoto modulu vypadá takto:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="c1"># nastavení logging modulu</span>
+<span class="c1"># filename nám udává cestu k souboru, do kterého chceme zapisovat</span>
+<span class="c1"># level nám udává jak důležité zprávy chceme logovat, udává se jako logging.LEVEL, pozor - není to string</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;podivny_vypocet.log&#39;</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Načítám číslo od uživatele&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Zadej číslo:&quot;</span><span class="p">))</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zadané čislo je: </span><span class="si">{</span><span class="n">cislo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Přičítám jedničku&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Po přičtení jedničky je hodnota: </span><span class="si">{</span><span class="n">cislo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Násobím dvěmi&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Po vynásobení dvěmi je hodnota: </span><span class="si">{</span><span class="n">cislo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Odečítám pětku&quot;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="n">cislo</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Po odečtení 5 je výsledek: </span><span class="si">{</span><span class="n">cislo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Výsledek je: </span><span class="si">{</span><span class="n">cislo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Konec programu&quot;</span><span class="p">)</span>
+</pre></div><p>Výstup z programu do konzole je pouze oznámení výsledku, veškeré ostatní výpisy se nachází v souboru <code>podivny_vypocet.log</code>, který se nachází v adresáři, ze kterého jsme program pustili.</p>
+<p>Jak je vidět z programu, pokud chci zaznamenat zprávu pomocí modulu <code>logging</code> musím na to použít funkci modulu. Možné funkce jsou vidět v následující ukázce:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;log_test.log&#39;</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="c1"># zaznamenávání ladících výpisů s příslušným levelem (důležitostí)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;Tohle je závažná chyba. Program ti nefunguje.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Kvůli chybě se nedala dokončit operace.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Je možné, že se ti za chvíli něco rozbije.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Funguju na pohodu!&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Tohle jsou podrobné informace důležité pro ladění programu.&quot;</span><span class="p">)</span>
+</pre></div><p>Všechny výpisy bychom měli vidět v souboru <code>log_test.log</code>, protože <code>level</code> máme nastavený na <code>logging.DEBUG</code>, který je nejnižší (s nejnižší důležitostí). Kromě nastaveného levelu se totiž logují i všechny levely vyšší (důležitější) a to jsou u nastavení <code>DEBUG</code> všechny. Pokud změníme <code>level</code> na <code>INFO</code> výpis z <code>logging.debug</code> už neuvidíme.</p>
+<blockquote><p>Logování je důležité, ale je to jedna z věcí, na kterou je potřeba cit, který si člověk osvojí až praxí. Loguj moc a tvé logy budou nečitelné, loguj málo a informace budou nedostatečné. Nicméně si nedělej hlavu, pokud zrovna nevíš co použít za level, nebo co vlastně logovat. Prostě loguj.</p>
+</blockquote>
+<h2 id="debugger">Debugger
+<a href="#header-debugger" class="header-link">#</a>
+</h2>
+<p>Ačkoliv jsou ladící výpisy užitečné, někdy je potřeba se uchýlit k sofistikovanějšímu nástroji. Ukažme si tedy, jak funguje debugovací nástroj v MuCode.
+Většina debugovacích nástrojů v jiných editorech funguje velmi podobně a existuje 
+i způsob, jak použít debugovací nástroj bez editoru <a href="https://docs.python.org/3/library/pdb.html">pdb</a>.</p>
+<p>Nejprve je třeba vybrat tzv. <strong>breakpoint</strong>, to je místo v kódu, které označíme 
+a po spuštění programu v debugovacím nástroji se tam
+program zastaví a nechá nás prohlédnout si, co se děje. V Mu se
+<strong>breakpoint</strong> nastaví kliknutím napravo od čísla řádku, měla by se objevit velká 
+červená značka. Pozor ne na každou řádku kódu jde breakpoint umístnit. Breakpointů 
+lze rozmístnit více, podle toho, které části programu nás zajímají.</p>
+<p><span class="figure"><a href="naucse:static?filename=1_set_breakpoint_hit_debug.png"><img src="naucse:static?filename=1_set_breakpoint_hit_debug.png" alt="Mu breakpoint"></a></span></p>
+<p>Po označení všech breakpointů stačí kliknout na tlačítko Debug a program se spustí.
+Ve chvíli, kdy dorazí k prvnímu brakpointu, se zastaví a my si můžeme prohlédnout
+obsah proměnných, program krokovat (tj. vykonávat řádek po řádku) nebo ho nechat 
+doběhnout do konce nebo dalšího breakpointu.</p>
+<p><span class="figure"><a href="naucse:static?filename=2_profit.png"><img src="naucse:static?filename=2_profit.png" alt="Mu debug"></a></span></p>
+<p>Takto můžeme snadno sledovat, co přesně program dělá: jak se mění obsah proměnných,
+jak a proč se program rozhoduje v podmínkách i jak probíhají cykly. Ovšem pozor
+občas se může stát, že se program chová při debugování trochu jinak než v "ostrém"
+provozu. V některých složitějších programech zase není možné se na některá místa 
+programu debugovacím nástrojem  dostat. A samozřejmě těžko můžeme debugger použít 
+přímo u uživatele. Proto je důležité ovládat všechny techniky hledání chyb.</p>

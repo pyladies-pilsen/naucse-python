@@ -95,9 +95,13 @@
                         },
                         "license": "cc-by-sa-40",
                         "slug": "index",
-                        "solutions": [],
+                        "solutions": [
+                            {
+                                "content": "<div class=\"row side-by-side-commands\"><div class=\"col\">\n                <h4>Unix</h4><div class=\"highlight\"><pre><span></span><span class=\"gp\">$ </span><span class=\"nb\">cd</span> naucse-python\n<span class=\"gp\">$ </span>mkdir <span class=\"nb\">test</span>\n<span class=\"gp\">$ </span>ls\n<span class=\"go\">test</span>\n</pre></div></div><div class=\"col\">\n                <h4>Windows</h4><div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt; </span>cd naucse-python<span class=\"gp\"></span>\n<span class=\"gp\">&gt; </span>mkdir test<span class=\"gp\"></span>\n<span class=\"gp\">&gt; </span>dir\n<span class=\"go\">05/08/2014 07:28 PM &lt;DIR&gt;  test</span>\n</pre></div></div></div>"
+                            }
+                        ],
                         "source_file": "lessons/beginners/cmdline/index.md",
-                        "title": "Příkazová řádka",
+                        "title": "Úvod do příkazové řádky",
                         "vars": {
                             "coach-present": false
                         }
@@ -118,7 +122,7 @@
                         "path": "cmdline/windows-file-browser.png"
                     }
                 },
-                "title": "Příkazová řádka"
+                "title": "Úvod do příkazové řádky"
             },
             "beginners/comparisons": {
                 "pages": {
@@ -178,9 +182,7 @@
                 "pages": {
                     "index": {
                         "attribution": [
-                            "Část této kapitoly je založena na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
-                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
-                            "Pro PyLadies CZ upravil Petr Viktorin, 2015-2021."
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2015-2017."
                         ],
                         "content": {
                             "path": "dict/index.html"
@@ -226,14 +228,18 @@
                 "pages": {
                     "index": {
                         "attribution": [
-                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017."
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017. Pro PyLadies Plzeň upravil Ondřej Kopáček, 2020."
                         ],
                         "content": {
                             "path": "exceptions/index.html"
                         },
                         "license": "cc-by-sa-40",
                         "slug": "index",
-                        "solutions": [],
+                        "solutions": [
+                            {
+                                "content": "<p>Možné řešení:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"k\">try</span><span class=\"p\">:</span>\n    <span class=\"c1\"># Následující dvě řádky vyhodí ValueError pokud vstup není číslo</span>\n    <span class=\"n\">prvni_cislo</span> <span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"nb\">input</span><span class=\"p\">(</span><span class=\"s2\">&quot;Zadej první číslo: &quot;</span><span class=\"p\">))</span>\n    <span class=\"n\">druhe_cislo</span> <span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"nb\">input</span><span class=\"p\">(</span><span class=\"s2\">&quot;Zadej druhé číslo: &quot;</span><span class=\"p\">))</span>\n\n    <span class=\"n\">operand</span> <span class=\"o\">=</span> <span class=\"nb\">input</span><span class=\"p\">(</span><span class=\"s2\">&quot;A co s nimi mám udělat? * / + nebo -  &quot;</span><span class=\"p\">)</span>\n\n    <span class=\"k\">if</span> <span class=\"n\">operand</span> <span class=\"o\">==</span> <span class=\"s2\">&quot;+&quot;</span><span class=\"p\">:</span>\n        <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"n\">prvni_cislo</span> <span class=\"o\">+</span> <span class=\"n\">druhe_cislo</span>\n    <span class=\"k\">elif</span> <span class=\"n\">operand</span> <span class=\"o\">==</span> <span class=\"s2\">&quot;-&quot;</span><span class=\"p\">:</span>\n        <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"n\">prvni_cislo</span> <span class=\"o\">-</span> <span class=\"n\">druhe_cislo</span>\n    <span class=\"k\">elif</span> <span class=\"n\">operand</span> <span class=\"o\">==</span> <span class=\"s2\">&quot;*&quot;</span><span class=\"p\">:</span>\n        <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"n\">prvni_cislo</span> <span class=\"o\">*</span> <span class=\"n\">druhe_cislo</span>\n    <span class=\"k\">elif</span> <span class=\"n\">operand</span> <span class=\"o\">==</span> <span class=\"s2\">&quot;/&quot;</span><span class=\"p\">:</span>\n        <span class=\"c1\"># Pokud je `druhe_cislo` nula, následující řádka vyhodí `ZeroDivisionError`</span>\n        <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"n\">prvni_cislo</span> <span class=\"o\">/</span> <span class=\"n\">druhe_cislo</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"c1\"># Vstupem je operand, se kterým neumíme počítat, nebo nějaký nesmysl</span>\n        <span class=\"c1\"># S nesmyslem počítat také neumíme, takže vyhodíme `ArithmeticError`</span>\n        <span class=\"c1\"># Volba výjimky je ale na nás, vhodný by mohl být i `SyntaxError`</span>\n        <span class=\"k\">raise</span> <span class=\"ne\">ArithmeticError</span>\n\n<span class=\"k\">except</span> <span class=\"ne\">ValueError</span><span class=\"p\">:</span>\n    <span class=\"c1\"># Zachytili jsme `ValueError` z načítání čísel</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s2\">&quot;Jedno z čísel bylo špatně zadané. Musíš být pečlivější.&quot;</span><span class=\"p\">)</span>\n<span class=\"k\">except</span> <span class=\"ne\">ZeroDivisionError</span><span class=\"p\">:</span>\n    <span class=\"c1\"># Tady jsme zachytili dělení nulou</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s2\">&quot;Nemůžeš dělit nulou!&quot;</span><span class=\"p\">)</span>\n<span class=\"k\">except</span> <span class=\"ne\">ArithmeticError</span><span class=\"p\">:</span>\n    <span class=\"c1\"># Tady jsme zachytili `ArithmeticError`, který program vyhodí</span>\n    <span class=\"c1\"># v případě špatně zadaného operátoru</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s2\">&quot;Tuhle operaci provést neumím.&quot;</span><span class=\"p\">)</span>\n<span class=\"k\">else</span><span class=\"p\">:</span>\n    <span class=\"c1\"># Else větev ve spojení s `try` blokem proběhne pouze, pokud v `try` bloku</span>\n    <span class=\"c1\"># nenastala žádná vyjímka</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"n\">prvni_cislo</span><span class=\"p\">,</span> <span class=\"n\">operand</span><span class=\"p\">,</span> <span class=\"n\">druhe_cislo</span><span class=\"p\">,</span> <span class=\"s2\">&quot;=&quot;</span><span class=\"p\">,</span> <span class=\"n\">vysledek</span><span class=\"p\">,</span> <span class=\"n\">sep</span><span class=\"o\">=</span><span class=\"s2\">&quot; &quot;</span><span class=\"p\">)</span>\n<span class=\"k\">finally</span><span class=\"p\">:</span>\n    <span class=\"c1\"># Tohle proběhne &quot;nakonec&quot;, ať už k nějaké vyjímce došlo nebo ne</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s2\">&quot;Děkuji za použití této skvělé kalkulačky&quot;</span><span class=\"p\">)</span>\n</pre></div>"
+                            }
+                        ],
                         "source_file": "lessons/beginners/exceptions/index.md",
                         "title": "Výjimky",
                         "vars": {
@@ -572,6 +578,23 @@
                             "coach-present": false
                         }
                     },
+                    "mu": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/mu.html"
+                        },
+                        "license": "cc-by-sa-40",
+                        "slug": "mu",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/mu.md",
+                        "subtitle": "MU",
+                        "title": "Instalace MU",
+                        "vars": {
+                            "coach-present": false
+                        }
+                    },
                     "notepad-plus-plus": {
                         "attribution": [
                             "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
@@ -634,6 +657,15 @@
                     },
                     "gedit_prefs.png": {
                         "path": "install-editor/gedit_prefs.png"
+                    },
+                    "mu-mode.png": {
+                        "path": "install-editor/mu-mode.png"
+                    },
+                    "mu-run.png": {
+                        "path": "install-editor/mu-run.png"
+                    },
+                    "mu-syntax-check.png": {
+                        "path": "install-editor/mu-syntax-check.png"
                     }
                 },
                 "title": "Instalace editoru"
@@ -679,7 +711,11 @@
                         },
                         "license": "cc-by-sa-40",
                         "slug": "index",
-                        "solutions": [],
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"k\">def</span> <span class=\"nf\">vyber_chybne</span><span class=\"p\">(</span><span class=\"n\">seznam</span><span class=\"p\">):</span>\n    <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n    <span class=\"k\">for</span> <span class=\"n\">zaznam</span> <span class=\"ow\">in</span> <span class=\"n\">seznam</span><span class=\"p\">:</span>\n        <span class=\"n\">jmeno_a_prijmeni</span> <span class=\"o\">=</span> <span class=\"n\">zaznam</span><span class=\"o\">.</span><span class=\"n\">split</span><span class=\"p\">(</span><span class=\"s1\">&#39; &#39;</span><span class=\"p\">)</span>\n        <span class=\"n\">jmeno</span> <span class=\"o\">=</span> <span class=\"n\">jmeno_a_prijmeni</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n        <span class=\"n\">prijmeni</span> <span class=\"o\">=</span> <span class=\"n\">jmeno_a_prijmeni</span><span class=\"p\">[</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n        <span class=\"k\">if</span> <span class=\"n\">jmeno</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">islower</span><span class=\"p\">()</span> <span class=\"ow\">or</span> <span class=\"n\">prijmeni</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">islower</span><span class=\"p\">():</span>\n            <span class=\"n\">vysledek</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">zaznam</span><span class=\"p\">)</span>\n    <span class=\"k\">return</span> <span class=\"n\">vysledek</span>\n\n<span class=\"k\">def</span> <span class=\"nf\">vyber_spravne</span><span class=\"p\">(</span><span class=\"n\">seznam</span><span class=\"p\">):</span>\n    <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n    <span class=\"k\">for</span> <span class=\"n\">zaznam</span> <span class=\"ow\">in</span> <span class=\"n\">seznam</span><span class=\"p\">:</span>\n        <span class=\"n\">jmeno_a_prijmeni</span> <span class=\"o\">=</span> <span class=\"n\">zaznam</span><span class=\"o\">.</span><span class=\"n\">split</span><span class=\"p\">(</span><span class=\"s1\">&#39; &#39;</span><span class=\"p\">)</span>\n        <span class=\"n\">jmeno</span> <span class=\"o\">=</span> <span class=\"n\">jmeno_a_prijmeni</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n        <span class=\"n\">prijmeni</span> <span class=\"o\">=</span> <span class=\"n\">jmeno_a_prijmeni</span><span class=\"p\">[</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n        <span class=\"k\">if</span> <span class=\"ow\">not</span> <span class=\"n\">jmeno</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">islower</span><span class=\"p\">()</span> <span class=\"ow\">and</span> <span class=\"ow\">not</span> <span class=\"n\">prijmeni</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">islower</span><span class=\"p\">():</span>\n            <span class=\"n\">vysledek</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">zaznam</span><span class=\"p\">)</span>\n    <span class=\"k\">return</span> <span class=\"n\">vysledek</span>\n\n<span class=\"k\">def</span> <span class=\"nf\">oprav_zaznamy</span><span class=\"p\">(</span><span class=\"n\">seznam</span><span class=\"p\">):</span>\n    <span class=\"n\">vysledek</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n    <span class=\"k\">for</span> <span class=\"n\">zaznam</span> <span class=\"ow\">in</span> <span class=\"n\">seznam</span><span class=\"p\">:</span>\n        <span class=\"n\">jmeno_a_prijmeni</span> <span class=\"o\">=</span> <span class=\"n\">zaznam</span><span class=\"o\">.</span><span class=\"n\">split</span><span class=\"p\">(</span><span class=\"s1\">&#39; &#39;</span><span class=\"p\">)</span>\n        <span class=\"n\">jmeno</span> <span class=\"o\">=</span> <span class=\"n\">jmeno_a_prijmeni</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n        <span class=\"n\">prijmeni</span> <span class=\"o\">=</span> <span class=\"n\">jmeno_a_prijmeni</span><span class=\"p\">[</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n        <span class=\"n\">vysledek</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">jmeno</span><span class=\"o\">.</span><span class=\"n\">capitalize</span><span class=\"p\">()</span> <span class=\"o\">+</span> <span class=\"s1\">&#39; &#39;</span> <span class=\"o\">+</span> <span class=\"n\">prijmeni</span><span class=\"o\">.</span><span class=\"n\">capitalize</span><span class=\"p\">())</span>\n    <span class=\"k\">return</span> <span class=\"n\">vysledek</span>\n</pre></div>"
+                            }
+                        ],
                         "source_file": "lessons/beginners/list/index.md",
                         "title": "Seznamy",
                         "vars": {
@@ -990,7 +1026,7 @@
                 "pages": {
                     "index": {
                         "attribution": [
-                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2020."
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017. Pro PyLadies Plzeň upravil Ondřej Kopáček, 2020."
                         ],
                         "content": {
                             "path": "testing/index.html"
@@ -1368,9 +1404,6 @@
                                 "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">from</span> <span class=\"nn\">turtle</span> <span class=\"kn\">import</span> <span class=\"n\">forward</span><span class=\"p\">,</span> <span class=\"n\">left</span><span class=\"p\">,</span> <span class=\"n\">exitonclick</span>\n\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">20</span><span class=\"p\">)</span>\n\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">20</span><span class=\"p\">)</span>\n\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n<span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">50</span><span class=\"p\">)</span>\n<span class=\"n\">left</span><span class=\"p\">(</span><span class=\"mi\">90</span><span class=\"p\">)</span>\n\n<span class=\"n\">exitonclick</span><span class=\"p\">()</span>\n</pre></div>"
                             },
                             {
-                                "content": "<p>Vypíšou se čísla od 0 do 4!\nProgram funguje steně, jako kdybys napsal/a:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"n\">i</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n<span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">)</span>\n\n<span class=\"n\">i</span> <span class=\"o\">=</span> <span class=\"mi\">1</span>\n<span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">)</span>\n\n<span class=\"n\">i</span> <span class=\"o\">=</span> <span class=\"mi\">2</span>\n<span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">)</span>\n\n<span class=\"n\">i</span> <span class=\"o\">=</span> <span class=\"mi\">3</span>\n<span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">)</span>\n\n<span class=\"n\">i</span> <span class=\"o\">=</span> <span class=\"mi\">4</span>\n<span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"n\">i</span><span class=\"p\">)</span>\n</pre></div><p>V sekvenci <code>range(5)</code> jsou čísla 0, 1, 2, 3 a 4. Je jich celkem pět.</p>"
-                            },
-                            {
                                 "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">from</span> <span class=\"nn\">turtle</span> <span class=\"kn\">import</span> <span class=\"n\">forward</span><span class=\"p\">,</span> <span class=\"n\">penup</span><span class=\"p\">,</span> <span class=\"n\">pendown</span><span class=\"p\">,</span> <span class=\"n\">exitonclick</span>\n\n<span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"mi\">10</span><span class=\"p\">):</span>\n    <span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">10</span><span class=\"p\">)</span>\n    <span class=\"n\">penup</span><span class=\"p\">()</span>\n    <span class=\"n\">forward</span><span class=\"p\">(</span><span class=\"mi\">5</span><span class=\"p\">)</span>\n    <span class=\"n\">pendown</span><span class=\"p\">()</span>\n\n<span class=\"n\">exitonclick</span><span class=\"p\">()</span>\n</pre></div>"
                             },
                             {
@@ -1519,7 +1552,7 @@
                 "materials": [
                     {
                         "lesson_slug": "beginners/cmdline",
-                        "title": "Příkazová řádka",
+                        "title": "Úvod do příkazové řádky",
                         "type": "lesson"
                     },
                     {
