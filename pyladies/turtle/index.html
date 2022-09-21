@@ -2,7 +2,7 @@
 <a href="#header-_" class="header-link">#</a>
 </h1>
 <p>V této lekci si vyzkoušíš <em>želví kreslení</em>.</p>
-<p>Spusť&nbsp; Python v <em>interaktivním módu</em> (bez souboru .py).</p>
+<p>Pusť Python v <em>interaktivním módu</em> (bez souboru .py).</p>
 <div class="highlight"><pre><span></span><span class="go">$ python</span>
 
 <span class="go">&gt;&gt;&gt;</span>
@@ -43,9 +43,6 @@ Na ocase má připevněný štětec, kterým při pohybu kreslí čáru.</p>
 </pre></div><p>Zkus chvíli dávat želvě příkazy.
 Když se ti výsledek nelíbí, můžeš zavřít kreslící okno a zkusit to znovu.
 (Nebo místo zavření okna můžeš naimportovat a použít funkci <code>clear()</code>.)</p>
-<p>Pokud je pro tebe těžké představit si kam se želva pomocí <code>left</code> a <code>right</code> otáčí 
-můžeš zkusit používat funkci <code>setheading</code>, které předáš absolutní úhel vůči "papíru":
-0° je doprava, 90° nahoru, 180° doleva, 270° dolu.</p>
 <h2 id="zelvi_program">Želví program
 <a href="#header-zelvi_program" class="header-link">#</a>
 </h2>
@@ -182,8 +179,140 @@ a čtyři rohy po 90°.</p>
     </div>
 </div><p>Tolik kódu! Tohle musí jít nějak zjednodušit!</p>
 <p>Jde.
-Přesně proto jsme se učili <code>for</code> cyklus!</p>
-<h2 id="dlouha_prerusovana_cara">Dlouhá přerušovaná čára
+Pojďme se naučit, jak v Pythonu nějakou činnost opakovat.</p>
+<h2 id="jak_opakovat_a_neopakovat_emseem">Jak opakovat – a neopakovat <em>se</em>
+<a href="#header-jak_opakovat_a_neopakovat_emseem" class="header-link">#</a>
+</h2>
+<p>Udělej v editoru nový soubor a ulož ho jako <code>cykly.py</code>.
+Budeš v něm zkoušet <em>cykly</em>.</p>
+<p>První opakovací program, který napíšeš, bude dělat tohle:</p>
+<ul>
+<li>Stokrát po sobě:<ul>
+<li>Napiš "Nikdy nebudu odsazovat o tři mezery!"</li>
+</ul>
+</li>
+</ul>
+<p>Přeložené do jazyka Python to vypadá následovně:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nikdy nebudu odsazovat o tři mezery!&#39;</span><span class="p">)</span>
+</pre></div><p>Na ono <code>for i in range(100)</code> se detailněji podíváme za chvíli,
+teď to pro nás bude “hlavička”, která říká “opakuj stokrát”.</p>
+<p>Podobnou “hlavičku” už jsi viděl/a u příkazu <code>if</code>.
+Stejně jako u <code>if</code> tu je na konci dvojtečka a za ní následuje
+odsazený blok – <em>tělo</em> příkazu; to na co se hlavička vztahuje.
+Tělo příkazu <code>if</code> se provede jen někdy;
+tělo příkazu <code>for</code> se opakuje několikrát dokola.</p>
+<h3 id="vycet">Výčet
+<a href="#header-vycet" class="header-link">#</a>
+</h3>
+<p>Zkus napsat ještě jeden vzorový program, který v češtině zní:</p>
+<ul>
+<li>Pro každý <var>pozdrav</var> z výčtu: „Ahoj“, “Hello”, “Hola”, ”Hei”, "SYN":<ul>
+<li>Vypiš <var>pozdrav</var> a za ním vykřičník.</li>
+</ul>
+</li>
+</ul>
+<p>A v Pythonu:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pozdrav</span> <span class="ow">in</span> <span class="s1">&#39;Ahoj&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;Hei&#39;</span><span class="p">,</span> <span class="s1">&#39;SYN&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div><p>Opět je tu hlavička a tělo příkazu.
+Tentokrát se na hlavičku podívej pozorněji.
+Pythonní <code>for <var>promenna</var> in <var>sekvence</var></code>
+znamená „Pro každé <var>promenna</var> ze <var>sekvence</var>“.</p>
+<p>Jméno proměnné si volíš sám/sama.
+Příkaz <code>for</code> danou proměnnou vždy <em>nastaví</em> na aktuální
+hodnotu a pak provede všechno, co je v odsazeném těle cyklu.
+Program výše tedy funguje úplně stejně, jako kdybys napsal/a:</p>
+<div class="highlight"><pre><span></span><span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Ahoj&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Hola&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Hei&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;SYN&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div><h3 id="range">Range
+<a href="#header-range" class="header-link">#</a>
+</h3>
+<p>Vraťme se k <code>for i in range(100)</code>.
+Už víš, že to znamená „Pro každé <var>i</var> ze sekvence <code>range(100)</code>“.
+Co je ale to <code>range</code>? Když si ho vypíšeš, nevypadne nic vysvětlujícího:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">range(0, 100)</span>
+</pre></div><p>Je ale použité jako „sekvence“
+v <code>for <var>promenna</var> in <var>sekvence</var></code>.
+Je to nějaký výčet, nějaká posloupnost hodnot.
+A teď už umíš vypsat, jaké to jsou!</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>   <span class="c1"># Doporučuju použít jen 5 místo 100</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div><p>neboli česky:</p>
+<ul>
+<li>Pro každé <var>i</var> z <code>range(5)</code>:<ul>
+<li>Vypiš <var>i</var></li>
+</ul>
+</li>
+</ul>
+<p>Program spusť. Jaká čísla se vypíšou? (Neboli: co je v sekvenci <code>range(5)</code>?)</p>
+<div class="solution" id="solution-3">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=3"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Vypíšou se čísla od 0 do 4!
+Program funguje steně, jako kdybys napsal/a:</p>
+<div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div><p>V sekvenci <code>range(5)</code> jsou čísla 0, 1, 2, 3 a 4. Je jich celkem pět.</p>
+    </div>
+</div><p>Funkce <code>range(n)</code> vrací <em>sekvenci čísel</em>.
+Začíná od 0 a čísel v ní je přesně <var>n</var>.
+(Na samotné <var>n</var> se tedy už nedostane.)</p>
+<p>Často budeš potřebovat Pythonu říct, ať něco „<var>n</var>-krát zopakuje“.
+Na to můžeš použít <code>for i in range(n)</code> („pro každé <var>i</var> od 0 do
+<var>n</var>-1“) s tím, že proměnná <var>i</var> – „počitadlo“ – tě nezajímá.
+V programu ji jednoduše nepoužiješ.</p>
+<p>Teď by už mělo být jasné, jak funguje původní program:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nikdy nebudu odsazovat o tři mezery!&#39;</span><span class="p">)</span>
+</pre></div><ul>
+<li>Zopakuj 100krát:<ul>
+<li>Vypiš <code>'Nikdy nebudu odsazovat o tři mezery!'</code></li>
+</ul>
+</li>
+</ul>
+<p>Python píše hlášky, jednu za druhou, a u toho si v promněnné <var>i</var>
+počítá, jak už je daleko.</p>
+<div class="admonition style-note"><p>Proměnná <var>i</var> se v matematice typicky používá pro <em>celá čísla</em>;
+je to zkratka z termínu <em>index</em> (číslo prvku).
+V programování se tradičně používá pro číslo průchodu cyklem,
+jako v příkladu výše.
+Pro lepší pochopení bývá dobré použít popisnější jméno proměnné, tady
+například <code>cislo_vypisu</code>; v krátkých a přehledných cyklech – a zvlášť v těch
+které proměnnou nepoužívají – se ale často setkáš s krátkým <code>i</code>, <code>j</code>, <code>k</code>…</p>
+<p>Někteří programátoři pojmenovávají ignorovanou proměnnou <code>_</code> (podtržítko).
+To je pro Python jméno jako jakékoli jiné, ničím se neliší od <code>i</code> nebo <code>x</code>:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nikdy nebudu odsazovat o tři mezery!&#39;</span><span class="p">)</span>
+</pre></div></div><h2 id="dlouha_prerusovana_cara">Dlouhá přerušovaná čára
 <a href="#header-dlouha_prerusovana_cara" class="header-link">#</a>
 </h2>
 <p>Už víš, že pomocí <code>penup</code> a <code>pendown</code> lze nakreslit přerušenou čáru:</p>
@@ -198,10 +327,10 @@ Přesně proto jsme se učili <code>for</code> cyklus!</p>
 <span class="n">exitonclick</span><span class="p">()</span>
 </pre></div><p>Zkus nakreslit dlouhou přerušovanou čáru.</p>
 <p><img src="naucse:static?filename=turtle-dashed.png" alt="Želva a přerušovaná čára"></p>
-<div class="solution" id="solution-3">
+<div class="solution" id="solution-4">
     <h3>Řešení</h3>
     <div class="solution-cover">
-        <a href="naucse:solution?solution=3"><span class="link-text">Ukázat řešení</span></a>
+        <a href="naucse:solution?solution=4"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">penup</span><span class="p">,</span> <span class="n">pendown</span><span class="p">,</span> <span class="n">exitonclick</span>
@@ -223,10 +352,10 @@ větší a větší.</p>
 <p>Dokonce můžeš na začátek dát prázdnou čárku (0 jednotek)
 a mít tak délky 0, 1, 2, 3, 4, …</p>
 <p>V jaké proměnné máš při prvním průchodu cyklem 0, ve druhém 1, atd.?</p>
-</div><div class="solution" id="solution-4">
+</div><div class="solution" id="solution-5">
     <h3>Řešení</h3>
     <div class="solution-cover">
-        <a href="naucse:solution?solution=4"><span class="link-text">Ukázat řešení</span></a>
+        <a href="naucse:solution?solution=5"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">penup</span><span class="p">,</span> <span class="n">pendown</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
@@ -253,10 +382,10 @@ a mít tak délky 0, 1, 2, 3, 4, …</p>
 </li>
 </ul>
 <p><img src="naucse:static?filename=turtle-square.png" alt="Želví čtverec"></p>
-<div class="solution" id="solution-5">
+<div class="solution" id="solution-6">
     <h3>Řešení</h3>
     <div class="solution-cover">
-        <a href="naucse:solution?solution=5"><span class="link-text">Ukázat řešení</span></a>
+        <a href="naucse:solution?solution=6"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">exitonclick</span>
@@ -282,10 +411,10 @@ Tentokrát už víš, jak to dělat chytře: opakuj pomocí příkazu
 </ul>
 </li>
 </ul>
-<div class="solution" id="solution-6">
+<div class="solution" id="solution-7">
     <h3>Řešení</h3>
     <div class="solution-cover">
-        <a href="naucse:solution?solution=6"><span class="link-text">Ukázat řešení</span></a>
+        <a href="naucse:solution?solution=7"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">forward</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">exitonclick</span>
