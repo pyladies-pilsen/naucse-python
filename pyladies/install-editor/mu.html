@@ -1,0 +1,87 @@
+<h1 id="instalace_mu">Instalace  Mu
+<a href="#header-instalace_mu" class="header-link">#</a>
+</h1>
+<p>Na Windows
+si stáhni MU z jeho <a href="https://codewith.mu/en/download">domovské stránky</a>
+a nainstaluj. Použij 64-bitovou nebo 32-bitovou verzi, stejně jako v případě Pythonu.</p>
+<p>Na Linuxu se Mu instaluje přes <code>pip</code>, který je součástí Pythonu.</p>
+<div class="highlight"><pre><span></span><span class="gp">$ </span>python -m pip install mu-editor
+</pre></div><p>Editor pak můžeš spustit z příkazové řádky</p>
+<div class="highlight"><pre><span></span><span class="gp">$ </span>mu-editor
+</pre></div><p>nebo si vyrobit zkratku.</p>
+<div class="highlight"><pre><span></span><span class="gp">$ </span>shortcut mu-editor
+</pre></div><p>Zkratka se vytvoří ve složce, ve které se právě nacházíš, poté ji můžeš přesunout kam chceš.
+K jejímu vytvoření je třeba balík <code>shortcut</code>, ten se dá naistalovat opět pomocí pipu.</p>
+<div class="highlight"><pre><span></span><span class="gp">$ </span>python -m pip install shortcut
+</pre></div><h2 id="nastaveni">Nastavení
+<a href="#header-nastaveni" class="header-link">#</a>
+</h2>
+<p>Při prvním spuštění vyber mód Python.</p>
+<p><span class="figure"><a href="naucse:static?filename=mu-mode.png"><img src="naucse:static?filename=mu-mode.png" alt="Mu run"></a></span></p>
+<p>Jinak se v Mu nemusí nic nastavovat, ani to moc nejde, funguje „z výroby“ jednoduše tak, jak má.</p>
+<p>Odsazování a obarvování bude fungovat správně jen v souborech s koncovkou <code>.py</code>
+(jako Python).
+V jiných programovacích jazycích se totiž odsazuje i obarvuje jinak.</p>
+<p>Proto jakmile v tomhle editoru vytvoříš nový soubor,
+měl/a bys ho co nejdřív uložit pod správným jménem.</p>
+<h2 id="spousteni_programu">Spouštění programů
+<a href="#header-spousteni_programu" class="header-link">#</a>
+</h2>
+<p>Mu není jen obyčejný editor pro psaní kódu, umí programy v Pythonu i spouštět, stačí kliknout a tlačítko Run a
+kód, který máš právě otevřený se spustí, v dolní části okna se objeví výstup. Více si ukážeme na lekci.</p>
+<p><span class="figure"><a href="naucse:static?filename=mu-run.png"><img src="naucse:static?filename=mu-run.png" alt="Mu run"></a></span></p>
+<h2 id="kontrola_stylu_zdrojoveho_kodu">Kontrola stylu zdrojového kódu
+<a href="#header-kontrola_stylu_zdrojoveho_kodu" class="header-link">#</a>
+</h2>
+<p>Tak jako čeština má i Python typografická pravidla.
+Například za čárkou se píše mezera, ale před ní ne.
+Jsou nepovinná, program bude fungovat i při jejich nedodržení,
+ale pomáhají psát přehledný kód, je tak dobré je dodržovat už od začátku.
+Pravidla pro Python jsou popsána v dokumentu
+<a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>.</p>
+<p>Aby sis je nemusel/a všechny pamatovat a postupně si na ně zvykla provádí kontrolu Mu za tebe.
+Stačí kliknout na ikonku zdviženého palce a Mu ti "zkoukne" kód a řekne, kde není správně upravený.</p>
+<p><span class="figure"><a href="naucse:static?filename=mu-syntax-check.png"><img src="naucse:static?filename=mu-syntax-check.png" alt="Mu syntax chceck"></a></span></p>
+<h2 id="nacvik_odsazovani">Nácvik odsazování
+<a href="#header-nacvik_odsazovani" class="header-link">#</a>
+</h2>
+<p>Jak už bylo zmíněno, v Pythonu je důležité, kolika mezerami řádek začíná.
+Proto se nám bude hodit vědět, jak rychle odsazovat bloky textu.
+Pojďme si ukázat, jak na to.</p>
+<p>Zkopíruj si do editoru tento text:</p>
+<div class="highlight"><pre><code>Ofelie:
+Ach princi!
+Jak má se Vaše Výsost už tak dlouho?
+Hamlet:
+Děkují poníženě: skvěle, skvěle, skvěle.
+Ofelie:
+Mám od vás, princi, stále ještě dárky,
+Jež dávno toužím vrátit. Prosím vás,
+račte je přijmout teď.
+Hamlet:
+Kdo? Já? Já nikdy
+vám nedal nic.
+Ofelie:
+Dal, Výsosti. A spolu s dárky slova
+tak rozmilá, že každý z nich
+měl jejich vůni. Ta teď vyvanula,
+a tak je vracím. Dary nejbohatší
+se mění v trety, když se dárce mračí.
+Zde, Výsosti.</code></pre></div><p><small>(úryvek ze hry Hamlet, napsal W. Shakespeare, překlad E. A. Saudek)</small></p>
+<p>Tenhle text není moc přehledný, tak ho zkusíme poodsazovat, aby vypadal takhle:</p>
+<div class="highlight"><pre><code>Ofelie:
+    Ach princi!
+    Jak má se Vaše Výsost už tak dlouho?
+Hamlet:
+    Děkují poníženě: skvěle, skvěle, skvěle.
+Ofelie:
+    Mám od vás, princi, stále ještě dárky,
+    Jež dávno toužím vrátit. Prosím vás,
+    račte je přijmout teď.
+atd.</code></pre></div><p>Abys odsadil/a jeden řádek, nastav kurzor na začátek řádku a stiskni
+klávesu <kbd>Tab</kbd>.
+Každým stisknutím řádek odsadíš o 4 mezery.</p>
+<p>Odsadíš-li moc, pomocí <kbd>Shift</kbd>+<kbd>Tab</kbd> odsazení zmenšíš.</p>
+<p>Chceš-li odsadit víc řádků najednou, všechny je vyber a stiskni <kbd>Tab</kbd>.
+I výběr můžeš „od-odsadit“ pomocí <kbd>Shift</kbd>+<kbd>Tab</kbd>.</p>
+<p>A to je vše! Teď máš nejen nastavený editor, ale umíš ho i používat.</p>
