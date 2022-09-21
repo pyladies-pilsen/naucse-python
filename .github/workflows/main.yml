@@ -26,15 +26,13 @@ jobs:
       run: |
         python -m pip install poetry
         poetry install -E ghp-compiled
-    - name: Compile the courses
+    - name: Compile the course
       run: |
-        for slug in pyladies mi-pyt meta lessons; do
-          poetry run python -m naucse_render compile _compiled/$slug --slug $slug \
+          poetry run python -m naucse_render compile _compiled \
             --edit-repo-url https://github.com/${{ github.repository }} \
             --edit-repo-branch main
-        done
     - if: ${{ github.ref == 'refs/heads/main' }}
-      name: Publish compiled courses
+      name: Publish compiled course
       run: |
         git fetch origin compiled || :
         poetry run python -m ghp_import -m "Compiled" -b compiled --push _compiled/
