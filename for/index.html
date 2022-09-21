@@ -1,0 +1,133 @@
+<h2 id="jak_opakovat_a_neopakovat_emseem">Jak opakovat – a neopakovat <em>se</em>
+<a href="#header-jak_opakovat_a_neopakovat_emseem" class="header-link">#</a>
+</h2>
+<p>Udělej v editoru nový soubor a ulož ho jako <code>cykly.py</code>.
+Budeš v něm zkoušet <em>cykly</em>.</p>
+<p>První opakovací program, který napíšeš, bude dělat tohle:</p>
+<ul>
+<li>Stokrát po sobě:<ul>
+<li>Napiš "Nikdy nebudu odsazovat o tři mezery!"</li>
+</ul>
+</li>
+</ul>
+<p>Přeložené do jazyka Python to vypadá následovně:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nikdy nebudu odsazovat o tři mezery!&#39;</span><span class="p">)</span>
+</pre></div><p>Na ono <code>for i in range(100)</code> se detailněji podíváme za chvíli,
+teď to pro nás bude “hlavička”, která říká “opakuj stokrát”.</p>
+<p>Podobnou “hlavičku” už jsi viděla u příkazu <code>if</code>.
+Stejně jako u <code>if</code> tu je na konci dvojtečka a za ní následuje
+odsazený blok – <em>tělo</em> příkazu; to na co se hlavička vztahuje.
+Tělo příkazu <code>if</code> se provede jen někdy;
+tělo příkazu <code>for</code> se opakuje několikrát dokola.</p>
+<h3 id="vycet">Výčet
+<a href="#header-vycet" class="header-link">#</a>
+</h3>
+<p>Zkus napsat ještě jeden vzorový program, který v češtině zní:</p>
+<ul>
+<li>Pro každý <var>pozdrav</var> z výčtu: „Ahoj“, “Hello”, “Hola”, ”Hei”, "SYN":<ul>
+<li>Vypiš <var>pozdrav</var> a za ním vykřičník.</li>
+</ul>
+</li>
+</ul>
+<p>A v Pythonu:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pozdrav</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Ahoj&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;Hei&#39;</span><span class="p">,</span> <span class="s1">&#39;SYN&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div><p>Opět je tu hlavička a tělo příkazu.
+Tentokrát se na hlavičku podívej pozorněji.
+Pythonní <code>for <var>promenna</var> in <var>sekvence</var></code>
+znamená „Pro každé <var>promenna</var> ze <var>sekvence</var>“.</p>
+<p>Jméno proměnné si volíš sama.
+Příkaz <code>for</code> danou proměnnou vždy <em>nastaví</em> na aktuální
+hodnotu a pak provede všechno, co je v odsazeném těle cyklu.
+Program výše tedy funguje úplně stejně, jako kdybys napsala:</p>
+<div class="highlight"><pre><span></span><span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Ahoj&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Hola&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;Hei&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">pozdrav</span> <span class="o">=</span> <span class="s1">&#39;SYN&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pozdrav</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div><h3 id="range">Range
+<a href="#header-range" class="header-link">#</a>
+</h3>
+<p>Vraťme se k <code>for i in range(100)</code>.
+Už víš, že to znamená „Pro každé <var>i</var> ze sekvence <code>range(100)</code>“.
+Co je ale to <code>range</code>? Když si ho vypíšeš, nevypadne nic vysvětlujícího:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">range(0, 100)</span>
+</pre></div><p>Je ale použité jako „sekvence“
+v <code>for <var>promenna</var> in <var>sekvence</var></code>.
+Je to nějaký výčet, nějaká posloupnost hodnot.
+A teď už umíš vypsat, jaké to jsou!</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>   <span class="c1"># Doporučuju použít jen 5 místo 100</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div><p>neboli česky:</p>
+<ul>
+<li>Pro každé <var>i</var> z <code>range(5)</code>:<ul>
+<li>Vypiš <var>i</var></li>
+</ul>
+</li>
+</ul>
+<p>Program spusť. Jaká čísla se vypíšou? (Neboli: co je v sekvenci <code>range(5)</code>?)</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Vypíšou se čísla od 0 do 4!
+Program funguje steně, jako kdybys napsala:</p>
+<div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div><p>V sekvenci <code>range(5)</code> jsou čísla 0, 1, 2, 3 a 4. Je jich celkem pět.</p>
+    </div>
+</div><p>Funkce <code>range(n)</code> vrací <em>sekvenci čísel</em>.
+Začíná od 0 a čísel v ní je přesně <var>n</var>.
+(Na samotné <var>n</var> se tedy už nedostane.)</p>
+<p>Často budeš potřebovat Pythonu říct, ať něco „<var>n</var>-krát zopakuje“.
+Na to můžeš použít <code>for i in range(n)</code> („pro každé <var>i</var> od 0 do
+<var>n</var>-1“) s tím, že proměnná <var>i</var> – „počitadlo“ – tě nezajímá.
+V programu ji jednoduše nepoužiješ.</p>
+<p>Teď by už mělo být jasné, jak funguje původní program:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nikdy nebudu odsazovat o tři mezery!&#39;</span><span class="p">)</span>
+</pre></div><ul>
+<li>Zopakuj 100krát:<ul>
+<li>Vypiš <code>'Nikdy nebudu odsazovat o tři mezery!'</code></li>
+</ul>
+</li>
+</ul>
+<p>Python píše hlášky, jednu za druhou, a u toho si v promněnné <var>i</var>
+počítá, jak už je daleko.</p>
+<div class="admonition style-note"><p>Proměnná <var>i</var> se v matematice typicky používá pro <em>celá čísla</em>;
+je to zkratka z termínu <em>index</em> (číslo prvku).
+V programování se tradičně používá pro číslo průchodu cyklem,
+jako v příkladu výše.
+Pro lepší pochopení bývá dobré použít popisnější jméno proměnné, tady
+například <code>cislo_vypisu</code>; v krátkých a přehledných cyklech – a zvlášť v těch
+které proměnnou nepoužívají – se ale často setkáš s krátkým <code>i</code>, <code>j</code>, <code>k</code>…</p>
+<p>Někteří programátoři pojmenovávají ignorovanou proměnnou <code>_</code> (podtržítko).
+To je pro Python jméno jako jakékoli jiné, ničím se neliší od <code>i</code> nebo <code>x</code>:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nikdy nebudu odsazovat o tři mezery!&#39;</span><span class="p">)</span>
+</pre></div></div>
