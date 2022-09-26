@@ -1462,7 +1462,7 @@
                 "title": "Github API"
             }
         },
-        "long_description": "<p>Tady najdeš všechny materiály k plzeňské verzi začátečnického kurzu\nPyLadies.</p>\n<p>Stránky samotných PyLadies jsou zde <a href=\"http://pyladies.cz/plzen\">http://pyladies.cz/plzen</a>.</p>\n<p>Úkoly můžeš odevzdávat tady <a href=\"https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-spring\">https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-spring</a>.</p>\n<p>Jednotlivé lekce jsou určeny naprostým začátečnicím.\nInstrukce jsou uvedeny pro operační systémy Linux, Windows i macOS.</p>",
+        "long_description": "<p>Tady najdeš všechny materiály k plzeňské verzi začátečnického kurzu\nPyLadies.</p>\n<p>Stránky samotných PyLadies jsou zde <a href=\"http://pyladies.cz/plzen\">http://pyladies.cz/plzen</a>.</p>\n<p>Úkoly můžeš odevzdávat tady <a href=\"https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-autumn\">https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-autumn</a>.</p>\n<p>Jednotlivé lekce jsou určeny naprostým začátečnicím.\nInstrukce jsou uvedeny pro operační systémy Linux, Windows i macOS.</p>",
         "place": "Plzeň",
         "sessions": [
             {
@@ -1499,7 +1499,7 @@
                         "type": "cheatsheet"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=install",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=install",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1538,7 +1538,7 @@
                         "type": "lesson"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=hello",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=hello",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1582,7 +1582,7 @@
                         "type": "cheatsheet"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=cyk",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=cyk",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1593,7 +1593,7 @@
                 "title": "Cykly"
             },
             {
-                "date": "2022-11-10",
+                "date": "2022-10-11",
                 "materials": [
                     {
                         "lesson_slug": "beginners/functions",
@@ -1621,7 +1621,7 @@
                         "type": "lesson"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=fun",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=fun",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1670,7 +1670,7 @@
                         "type": "cheatsheet"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=str_fio",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=str_fio",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1743,7 +1743,7 @@
                         "type": "cheatsheet"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=list",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=list",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1754,7 +1754,7 @@
                 "title": "Seznamy"
             },
             {
-                "date": "2022-11-15",
+                "date": "2022-11-08",
                 "materials": [
                     {
                         "lesson_slug": "beginners/dict",
@@ -1787,7 +1787,7 @@
                         "type": "cheatsheet"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=dict",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=dict",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1798,7 +1798,7 @@
                 "title": "Slovníky"
             },
             {
-                "date": "2022-11-22",
+                "date": "2022-11-15",
                 "materials": [
                     {
                         "lesson_slug": "beginners/class",
@@ -1811,7 +1811,7 @@
                         "type": "lesson"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=class",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=class",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
@@ -1822,7 +1822,7 @@
                 "title": "Třídy"
             },
             {
-                "date": "2022-11-29",
+                "date": "2022-11-22",
                 "materials": [
                     {
                         "lesson_slug": "beginners/exceptions",
@@ -1855,7 +1855,7 @@
                         "type": "cheatsheet"
                     },
                     {
-                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=test",
+                        "external_url": "https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=test",
                         "title": "Domácí projekty",
                         "type": "homework"
                     }
