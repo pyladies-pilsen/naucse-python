@@ -59,7 +59,6 @@ $ python3 -m tkinter
 ```
 
 Objeví-li se okýnko, je všechno v pořádku.
-Zavři ho a přejdi na [doinstalování `virtualenv`](#install-virtualenv).
 
 Jestli ne, modul `tkinter` ještě nainstaluj:
 
