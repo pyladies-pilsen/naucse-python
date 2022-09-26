@@ -1506,7 +1506,7 @@
                 ],
                 "serial": "1",
                 "slug": "install",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Instalace"
             },
             {
@@ -1545,7 +1545,7 @@
                 ],
                 "serial": "2",
                 "slug": "hello",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Proměnné a porovnávání"
             },
             {
@@ -1589,7 +1589,7 @@
                 ],
                 "serial": "3",
                 "slug": "cyk",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Cykly"
             },
             {
@@ -1628,7 +1628,7 @@
                 ],
                 "serial": "4",
                 "slug": "fun",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Funkce"
             },
             {
@@ -1677,7 +1677,7 @@
                 ],
                 "serial": "5",
                 "slug": "str_fio",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Soubory a řetězce"
             },
             {
@@ -1711,7 +1711,7 @@
                 ],
                 "serial": "6",
                 "slug": "ex",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Procvičování"
             },
             {
@@ -1750,7 +1750,7 @@
                 ],
                 "serial": "7",
                 "slug": "list",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Seznamy"
             },
             {
@@ -1794,7 +1794,7 @@
                 ],
                 "serial": "8",
                 "slug": "dict",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Slovníky"
             },
             {
@@ -1818,7 +1818,7 @@
                 ],
                 "serial": "9",
                 "slug": "class",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Třídy"
             },
             {
@@ -1862,7 +1862,7 @@
                 ],
                 "serial": "10",
                 "slug": "test",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Testování"
             },
             {
@@ -1886,11 +1886,11 @@
                 ],
                 "serial": "11",
                 "slug": "foss",
-                "source_file": "courses/course.yml",
+                "source_file": "course.yml",
                 "title": "Open-source a spolupráce"
             }
         ],
-        "source_file": "courses/course.yml",
+        "source_file": "course.yml",
         "subtitle": "Plzeň - podzim 2022 - úterý",
         "time_description": "18:00–20:00",
         "timezone": "Europe/Prague",
