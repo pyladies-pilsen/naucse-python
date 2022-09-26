@@ -25,7 +25,6 @@ Pak soubor ulož jako `ahoj.py`:
 
 * V adresáři, kde máš soubory ke kurzům Pythonu, si založ adresář pojmenovaný
   podle čísla lekce (např. `02`).
-  Měl by být vedle tvého virtuálního prostředí.
 * Do něj pak soubor ulož pod jménem `ahoj.py`.
 
 Pokud máš v ukládacím okýnku možnost zvolit *kódování*, zvol `UTF-8`.
@@ -40,13 +39,6 @@ Pomocí `cd` donaviguj do adresáře, kde máš soubory ke kurzům Pythonu.
 > S příkazovou řádkou jsme se seznámil{{gnd('i', 'y', both='i')}}
 > v [minulé lekci](../../beginners/cmdline/), která popisuje i změnu aktuálního
 > adresáře pomocí příkazu `cd`.
-
-Aktivuj si virtuální prostředí.
-
-> [note]
-> Příkaz k tomu jsme si ukázali na konci
-> [návodu na tvorbu virtuálního prostředí](../venv-setup/); končí `activate`.
-
 
 Pak a zadej tento příkaz:
 
