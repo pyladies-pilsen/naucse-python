@@ -13,7 +13,7 @@ long_description: |
 
     Stránky samotných PyLadies jsou zde http://pyladies.cz/plzen.
 
-    Úkoly můžeš odevzdávat tady https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-spring.
+    Úkoly můžeš odevzdávat tady https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-autumn.
 
     Jednotlivé lekce jsou určeny naprostým začátečnicím.
     Instrukce jsou uvedeny pro operační systémy Linux, Windows i macOS.
@@ -45,7 +45,7 @@ sessions:
     url: https://s3-eu-west-1.amazonaws.com/messa-shared-files/2017/09/pyladies_2_lekce_tahak.pdf
     type: cheatsheet
   - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=install
+    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=install
     type: homework
 
 - title: Proměnné a porovnávání
@@ -60,7 +60,7 @@ sessions:
   - lesson: beginners/expressions
     title: '(Doplnění) Vyhodnocování výrazů'
   - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=hello
+    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=hello
     type: homework
 
 - title: Cykly
@@ -77,12 +77,12 @@ sessions:
       url: https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf
       type: cheatsheet
     - title: Domácí projekty
-      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=cyk
+      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=cyk
       type: homework
 
 - title: Funkce
   slug: fun
-  date: 2022-11-10
+  date: 2022-10-11
   materials:
   - lesson: beginners/functions
   - lesson: beginners/basic-functions
@@ -90,7 +90,7 @@ sessions:
   - lesson: beginners/local-variables
   - lesson: beginners/nested-traceback
   - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=fun
+    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=fun
     type: homework
 
 - title: Soubory a řetězce
@@ -109,7 +109,7 @@ sessions:
     url: https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf
     type: cheatsheet
   - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=str_fio
+    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=str_fio
     type: homework
 
 
@@ -131,7 +131,7 @@ sessions:
       url: http://pyladies.cz/v1/s005-modules/handout/handout7.pdf
       type: homework
 #    - title: Domácí projekty
-#      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=ex
+#      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=ex
 #      type: homework
 
 - title: Seznamy
@@ -146,12 +146,12 @@ sessions:
     url: https://pyvec.github.io/cheatsheets/lists/lists-cs.pdf
     type: cheatsheet
   - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=list
+    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=list
     type: homework
 
 - title: Slovníky
   slug: dict
-  date: 2022-11-15
+  date: 2022-11-08
   materials:
     - lesson: beginners/dict
     - lesson: beginners/dict-with-list-values
@@ -164,22 +164,22 @@ sessions:
       url: https://pyvec.github.io/cheatsheets/dicts/dicts-cs.pdf
       type: cheatsheet
     - title: Domácí projekty
-      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=dict
+      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=dict
       type: homework
 
 - title: Třídy
   slug: class
-  date: 2022-11-22
+  date: 2022-11-15
   materials:
   - lesson: beginners/class
   - lesson: beginners/inheritance
   - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=class
+    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=class
     type: homework
 
 - title: Testování
   slug: test
-  date: 2022-11-29
+  date: 2022-11-22
   materials:
     - lesson: beginners/exceptions
     - lesson: beginners/modules
@@ -190,7 +190,7 @@ sessions:
       url: https://pyvec.github.io/cheatsheets/exceptions/exceptions-cs.pdf
       type: cheatsheet
     - title: Domácí projekty
-      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-spring&session=test
+      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=test
       type: homework
 
 - title: Open-source a spolupráce
