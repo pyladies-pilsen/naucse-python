@@ -197,6 +197,7 @@ sessions:
   slug: foss
   date: 2022-11-29
   materials:
+  - lesson: git/install
   - lesson: git/basics
   - lesson: git/collaboration
     url: https://pyvec.github.io/cheatsheets/basic-git/basic-git-cs.pdf
