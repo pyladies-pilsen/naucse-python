@@ -6,6 +6,9 @@ subpages:
     mu:
         title: Instalace MU
         subtitle: MU
+    thonny:
+        title: Instalace Thonnyho
+        subtitle: Thonny
     vscode:
         title: Instalace Visual Studio Code
         subtitle: Visual Studio Code
