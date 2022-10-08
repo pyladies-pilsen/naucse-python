@@ -745,6 +745,25 @@
                             "user-gender": "f"
                         }
                     },
+                    "thonny": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/thonny.html"
+                        },
+                        "license": "cc-by-sa-40",
+                        "slug": "thonny",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/thonny.md",
+                        "subtitle": "Thonny",
+                        "title": "Instalace Thonnyho",
+                        "vars": {
+                            "coach-present": true,
+                            "pyladies": true,
+                            "user-gender": "f"
+                        }
+                    },
                     "vscode": {
                         "attribution": [
                             "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
@@ -784,6 +803,9 @@
                     },
                     "mu-syntax-check.png": {
                         "path": "install-editor/mu-syntax-check.png"
+                    },
+                    "thonny-run.png": {
+                        "path": "install-editor/thonny-run.png"
                     }
                 },
                 "title": "Instalace editoru"
