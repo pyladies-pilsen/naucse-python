@@ -17,13 +17,16 @@ vars:
   coach-present: true
 
 sessions:
-- title: První program
+- title: První program # tomas
   slug: hello
   date: 2022-11-10
   materials:
   - lesson: beginners/hello-world
   - lesson: beginners/print
   - lesson: beginners/variables
+  - lesson: beginners/comparisons
+  - lesson: beginners/and-or
+    title: '(Bonus) "Nebo" anebo "a"'
   - lesson: beginners/expressions
     title: '(Doplnění) Vyhodnocování výrazů'
   - lesson: beginners/install
@@ -35,26 +38,24 @@ sessions:
     type: cheatsheet
 
 
-- title: Řídící struktury
-  date: 2022-11-24
+- title: Řídící struktury # vasek
+  date: 2022-11-15
   slug: cyk
   materials:
-    - lesson: beginners/comparisons
-    - lesson: beginners/and-or
-      title: '(Bonus) "Nebo" anebo "a"'
+    - lesson: beginners/while
     - lesson: beginners/for
     - lesson: beginners/range
       title: '(Doplnění) Range - sekvence čísel'
     - lesson: intro/turtle
-    - lesson: beginners/while
     - lesson: beginners/reassignment
     - title: Tahák s užitečnými funkcemi
       url: https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf
       type: cheatsheet
 
-- title: Funkce
+
+- title: Funkce # vasek
   slug: fun
-  date: 2022-12-01
+  date: 2022-11-24
   materials:
   - lesson: beginners/functions
   - lesson: beginners/basic-functions
@@ -63,17 +64,23 @@ sessions:
   - lesson: beginners/nested-traceback
 
 
-- title: Ostatní knihovny a technologie
+- title: Ostatní knihovny a technologie # vasek + tomas
   slug: other
-  date: 2022-12-08
+  date: 2022-12-01
   materials:
+    # co se nevešlo do ostatních lekcí:
+    # git a github
+    # java vs javascript vs c vs python
+    # databze
+    # docker
+    # aws
     - lesson: git/install
     - lesson: git/basics
     - lesson: git/collaboration
 
-- title: Datové struktury a soubory
+- title: Datové struktury a soubory # tomas
   slug: str_fio
-  date: 2022-12-15
+  date: 2022-12-08
   materials:
 
   - lesson: beginners/str
@@ -105,10 +112,11 @@ sessions:
     url: https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf
     type: cheatsheet
 
-- title: Projekt - Robomaster
+- title: Projekt - Robomaster  # vasek + tomas
   slug: project
-  date: 2022-12-22
+  date: 2022-12-15
   materials:
+  # materiály
   - lesson: projects/asteroids
 
 
