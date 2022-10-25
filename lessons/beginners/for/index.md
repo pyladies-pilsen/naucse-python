@@ -25,47 +25,61 @@ Tělo příkazu `if` se provede jen někdy;
 tělo příkazu `for` se opakuje několikrát dokola.
 
 
-### Výčet
+### Seznámení se Seznamy
 
-Zkus napsat ještě jeden vzorový program, který v češtině zní:
-
-* Pro každý <var>pozdrav</var> z výčtu: „Ahoj“, “Hello”, “Hola”, ”Hei”, "SYN":
-  * Vypiš <var>pozdrav</var> a za ním vykřičník.
-
-A v Pythonu:
+Než se pustíme dále do poznávání cyklu `for`, představíme si jeden datový typ, kterému se budeme podrobněji věnovat v kurzu později. Pro lepší vysvětlení a pochopení i ho ale představíme už teď. 
+Jedná se tzv. `seznamy`. Pro začátek můžeš seznam chápat jako třeba nákupní seznam. Obsahuje seřazené položky (prvky), které lze měnit, upravovat, přidávat a odebírat. Vytvoříme si tedy takový malý nákupní seznam.
 
 ```python
-for pozdrav in ['Ahoj', 'Hello', 'Hola', 'Hei', 'SYN']:
-    print(pozdrav + '!')
+nakupni_seznam = ["chleba","mleko","jablka","maslo","maso"]
 ```
 
-Opět je tu hlavička a tělo příkazu.
-Tentokrát se na hlavičku podívej pozorněji.
-Pythonní <code>for <var>promenna</var> in <var>sekvence</var></code>
-znamená „Pro každé <var>promenna</var> ze <var>sekvence</var>“.
+Seznam je seřazený v pořadí, ve kterém byl vytvořen. Zkusíme vybrat první položku:
 
-Jméno proměnné si volíš {{gnd('sám', 'sama')}}.
-Příkaz `for` danou proměnnou vždy *nastaví* na aktuální
-hodnotu a pak provede všechno, co je v odsazeném těle cyklu.
-Program výše tedy funguje úplně stejně, jako kdybys napsal{{a}}:
+```pycon
+>>> nakupni_seznam[0]
+'chleba'
+```
+
+Seznam obsahuje pět položek a jednotlivé prvky jsou číslovány (jak je v Pythonu zvykem) od nuly. Co se ale stane, když vybereme položku mimo náš rozsah?
+
+```pycon
+>>> nakupni_seznam[5]
+```
+
+Položky lze vybírat také pomocí zvoleného rozsahu. Touto způsobu se říká *slicing*.Takto vybereš první tři položky ze seznamu. Opět ale pozor na rozsah
+
+```pycon
+>>> nakupni_seznam[0:3]
+['chleba', 'mleko', 'jablka']
+```
+
+Jak to ale souvisí s cyklem `for`. Ono totiž k práci se seznamem se dokonale hodí právě cyklus `for`. V úvodu kapitoly jsme měli za úkol vypsat 100x "Nikdy nebudu odsazovat o tři mezery!". Co kdybychom si úlohu trochu modifikovali a chtěli postupně vypisovat každou z položek v nákupním seznamu?
 
 ```python
-pozdrav = 'Ahoj'
-print(pozdrav + '!')
-
-pozdrav = 'Hello'
-print(pozdrav + '!')
-
-pozdrav = 'Hola'
-print(pozdrav + '!')
-
-pozdrav = 'Hei'
-print(pozdrav + '!')
-
-pozdrav = 'SYN'
-print(pozdrav + '!')
+nakupni_seznam[0]
+nakupni_seznam[1]
+nakupni_seznam[2]
+nakupni_seznam[3]
+nakupni_seznam[4]
 ```
 
+Nicméně tato možnost bude zejména pro dlouhé seznamy dost nepraktická. Přitom Pythonu stačí říct: `Pro pokožku v seznamu vytiskni položku  ` 
+
+```python
+for polozka in nakupni_seznam:
+    print(polozka)
+```
+
+Otevírá se tím další možnost a to využití podmínek (`if` a ` else`). Předpokládejme, že nákupní seznam se jednou promění v nákup a ten budeme chtít někam uklidit. Přitom všechny položky, které jsme nakoupili a začíná na *m* patří do lednice. Zbytek můžeme složit do spižírny. Zařadíme tedy do ` for` cyklu podmínku, která nám označí položky, které do lednice patří a které ne.
+
+```python
+for polozka in nakupni_seznam:
+    if "m" in polozka:
+        print(polozka + " vlozena do lednice")
+    else:
+        print("polozka nepatri do lednice")
+```
 
 ### Range
 
@@ -140,6 +154,27 @@ for i in range(100):
 
 Python píše hlášky, jednu za druhou, a u toho si v promněnné <var>i</var>
 počítá, jak už je daleko.
+
+Vzpomeň si teď, jak jsme vybírali jednotlivé položky ze seznamů prostřednictvím indexu *nakupni_seznam[i]*. Takto lze procházet seznam i pomocí `for `. Rovnou si představíme metodu ` len ()`. Tato metoda vrací počet prvků v objektu. Náš seznam má pět položek a proto:
+
+```pycon
+>>> len(nakupni_seznam)
+5
+```
+
+Funkci lze používat také pro jiné datové typy, například *string*.
+
+```pycon
+>>> len('Ahoj')
+4
+```
+
+Náš nákupní seznam si můžeme takto vypsat s použitím indexování: 
+
+```python
+for i in range(len(nakupni_seznam)):
+    print(nakupni_seznam [i])
+```
 
 > [style-note]
 > Proměnná <var>i</var> se v matematice typicky používá pro *celá čísla*;
