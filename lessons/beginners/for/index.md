@@ -64,14 +64,15 @@ nakupni_seznam[3]
 nakupni_seznam[4]
 ```
 
-Nicméně tato možnost bude zejména pro dlouhé seznamy dost nepraktická. Přitom Pythonu stačí říct: `Pro pokožku v seznamu vytiskni položku  ` 
+Nicméně tato možnost bude zejména pro dlouhé seznamy dost nepraktická. 
+Přitom Pythonu stačí říct: `Pro pokožku v seznamu vytiskni položku` 
 
 ```python
 for polozka in nakupni_seznam:
     print(polozka)
 ```
 
-Otevírá se tím další možnost a to využití podmínek (`if` a ` else`). Předpokládejme, že nákupní seznam se jednou promění v nákup a ten budeme chtít někam uklidit. Přitom všechny položky, které jsme nakoupili a začíná na *m* patří do lednice. Zbytek můžeme složit do spižírny. Zařadíme tedy do ` for` cyklu podmínku, která nám označí položky, které do lednice patří a které ne.
+Otevírá se tím další možnost a to využití podmínek (`if` a ` else`). Předpokládejme, že nákupní seznam se jednou promění v nákup a ten budeme chtít někam uklidit. Přitom všechny položky začínající na *m* patří do lednice. Zbytek můžeme složit do spižírny. Zařadíme tedy do ` for` cyklu podmínku, která nám označí položky, které do lednice patří a které ne.
 
 ```python
 for polozka in nakupni_seznam:
