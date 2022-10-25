@@ -24,11 +24,11 @@ sessions:
   - lesson: beginners/hello-world
   - lesson: beginners/print
   - lesson: beginners/variables
-  - lesson: beginners/comparisons
-  - lesson: beginners/and-or
-    title: '(Bonus) "Nebo" anebo "a"'
-  - lesson: beginners/expressions
-    title: '(Doplnění) Vyhodnocování výrazů'
+  #- lesson: beginners/comparisons
+  #- lesson: beginners/and-or
+   # title: '(Bonus) "Nebo" anebo "a"'
+  #- lesson: beginners/expressions
+   # title: '(Doplnění) Vyhodnocování výrazů'
   - lesson: beginners/install
     title: "(Lokální instalace) Python"
   - lesson: beginners/install-editor
@@ -42,13 +42,20 @@ sessions:
   date: 2022-11-15
   slug: cyk
   materials:
-    - lesson: beginners/while
+    - lesson: beginners/comparisons
+    - lesson: beginners/and-or
+      title: '(Bonus) "Nebo" anebo "a"'
+    - lesson: beginners/expressions
+      title: '(Doplnění) Vyhodnocování výrazů'
     - lesson: beginners/for
+      title: Cyklus for
+    - lesson: beginners/while
+      title: Cyklus while
     - lesson: beginners/range
       title: '(Doplnění) Range - sekvence čísel'
-    - lesson: intro/turtle
-    - lesson: beginners/reassignment
-    - title: Tahák s užitečnými funkcemi
+    #- lesson: intro/turtle
+    #- lesson: beginners/reassignment
+    #- title: Tahák s užitečnými funkcemi
       url: https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf
       type: cheatsheet
 
