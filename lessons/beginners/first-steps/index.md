@@ -1,9 +1,7 @@
 # Interaktivní režim Pythonu
 
-Chceš-li si začít hrát s Pythonem, otevři *příkazový řádek* a aktivuj virtuální prostředí.
-Zkontroluj si, že ti na začátku příkazové řádky svítí `(venv)`.
 
-Je-li tomu tak, nezbývá než – konečně – pustit Python. K tomu použij příkaz `python`:
+Chceš-li si začít hrát s Pythonem, který máš nainstalovaný lokálně na svém počítatči, otevři *příkazový řádek* a spusť   Python. K tomu použij příkaz `python`:
 
 ``` console
 $ python
@@ -11,6 +9,7 @@ Python 3.6.6 (...)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
+Používáš-li [replit.com](https://replit.com/) nejprve si vytvoř Repl s Pythonem, interaktivní režim Pythonu pak můžeš spustit v záložce `Shell` stejným způsobem.
 
 Příkaz vypíše několik informací. Z prvního řádku se můžeš ujistit, že používáš Python 3.
 (Verze by měla být `3.6` nebo vyšší. Vidíš-li číslo jako `2.7.11`, něco je špatně – popros o radu kouče.)
@@ -36,6 +35,7 @@ když Python nebude spokojený.
 V průběhu kurzu jich uvidíš ještě spoustu,
 takže si ji dobře prohlédni, ať ji příště poznáš.
 
+ 
 ## První příkaz
 
 Třemi „zobáčky“ `>>>` Python prosí o instrukce.
@@ -109,25 +109,18 @@ Na to má Python operátory `//` (podíl) a `%` (zbytek):
 Pokud ses dostal{{a}} až sem, gratuluji!
 Python máš nejen nainstalovaný, ale taky ti funguje.
 Stačí ho už jen zavřít a pak opustit i samotnou příkazovou řádku.
-V Pythonu se to dělá pomocí `quit()`, s prázdnými závorkami na konci.
+V Pythonu se to dělá pomocí `quit()` nebo `exit()`, s prázdnými závorkami na konci.
 
 <div class="highlight"><pre>
 <span class="gp">&gt;&gt;&gt;</span> quit()
-<span class="gp">(venv)$</span>
 </pre></div>
 
 Zobáčky `>>>` se změnily na výzvu
-příkazové řádky, která začíná `(venv)` a končí `$` nebo `>`.
+příkazové řádky, která končí `$` nebo `>`.
 Teď fungují příkazy jako `whoami` a `cd`, ale příkazy Pythonu
 jako `1 + 2` fungovat nebudou, dokud Python opět nepustíš pomocí
 příkazu `python`.
 
-Ukončit virtuální prostředí můžeš příkazem `deactivate` –
-tentokrát bez závorek.
-
-```console
-(venv)$ deactivate
-```
 
 Příkazovou řádku můžeš nakonec zavřít příkazem `exit`.
 

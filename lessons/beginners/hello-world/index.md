@@ -2,7 +2,7 @@
 
 ```pycon
 >>> 3 + 4
-7
+8
 ```
 
 Psaní příkazů přímo v Pythonu, <em>interaktivně</em>,
@@ -12,8 +12,7 @@ Na jednoduché výpočty to nevadí, ale až budou tvoje programy složitější
 budeš je potřebovat nějak uložit.
 
 Otevři editor
-(Ten bys měl{{a}} mít nainstalovaný, jestli ne, instrukce jsou v [předchozí
-lekci]({{ lesson_url('beginners/install-editor') }}).)
+Můžeš ho mít buď naistalovaný (Instrukce jsou [zde]({{ lesson_url('beginners/install-editor') }}) nebo použij repl.com. 
 
 V něm vytvoř nový soubor, do kterého napiš následující text:
 
@@ -23,9 +22,6 @@ print("Ahoj světe!")
 
 Pak soubor ulož jako `ahoj.py`:
 
-* V adresáři, kde máš soubory ke kurzům Pythonu, si založ adresář pojmenovaný
-  podle čísla lekce (např. `02`).
-* Do něj pak soubor ulož pod jménem `ahoj.py`.
 
 Pokud máš v ukládacím okýnku možnost zvolit *kódování*, zvol `UTF-8`.
 Můžeš–li zvolit typ souboru, zvol `.py` nebo „všechny soubory“.
@@ -39,6 +35,8 @@ Pomocí `cd` donaviguj do adresáře, kde máš soubory ke kurzům Pythonu.
 > S příkazovou řádkou jsme se seznámil{{gnd('i', 'y', both='i')}}
 > v [minulé lekci](../../beginners/cmdline/), která popisuje i změnu aktuálního
 > adresáře pomocí příkazu `cd`.
+
+Na repl.com můžeš tento krok přeskočit.
 
 Pak a zadej tento příkaz:
 

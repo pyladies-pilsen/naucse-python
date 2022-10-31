@@ -21,6 +21,7 @@ sessions:
   slug: hello
   date: 2022-11-10
   materials:
+  - lesson: beginners/first-steps
   - lesson: beginners/hello-world
   - lesson: beginners/print
   - lesson: beginners/variables
@@ -36,6 +37,10 @@ sessions:
   - title: Tahák na klávesnici (PDF)
     url: https://pyvec.github.io/cheatsheets/keyboard/keyboard-cs.pdf
     type: cheatsheet
+  - title: Kódy z lekce (repl.it)
+    url: https://replit.com/@zitkat/Lekce-1-Prvni-program
+    type: link
+
 
 
 - title: Řídící struktury # vasek
