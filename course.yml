@@ -1,102 +1,101 @@
-title: Začátečnický kurz PyLadies
-subtitle: Plzeň - podzim 2022 - úterý
-time: 18:00–20:00
-place: Plzeň
+title: Lite Python Workshop
+subtitle: SITPort - podzim 2022 - čtvrtek
+time: 15:00 - 16:30
+place: SITPort Plzeň
 default_time:
-  start: '18:00'
-  end: '20:00'
+  start: '15:00'
+  end: '16:30'
 timezone: Europe/Prague
 description: Naučte se Python vážně od začátku. Žádné předchozí znalosti nejsou potřeba.
 long_description: |
-    Tady najdeš všechny materiály k plzeňské verzi začátečnického kurzu
-    PyLadies.
+    Chceš si osvojit programování a nevíš, jak začít? Pak se neváhej zúčastnit série 6 workshopů, na
+    kterých tě naučíme základy programování v nejrozšířenějším programovacím jazyce na světě,
+    Pythonu. Díky praktickým příkladům a cvičením, které si pro vás nachystali naši zkušení lektoři, se
+    budete učit krok za krokem rozvíjet své nové programovací dovednosti.
 
-    Stránky samotných PyLadies jsou zde http://pyladies.cz/plzen.
-
-    Úkoly můžeš odevzdávat tady https://projekty.pyladies.cz/course?course=pyladies-2022-plzen-autumn.
-
-    Jednotlivé lekce jsou určeny naprostým začátečnicím.
-    Instrukce jsou uvedeny pro operační systémy Linux, Windows i macOS.
-
-canonical: true
 vars:
-  user-gender: f
-  pyladies: true
   coach-present: true
 
 sessions:
-- title: Instalace
-  slug: install
-  date: 2022-09-20
+- title: První program # tomas
+  slug: hello
+  date: 2022-11-10
   materials:
-#  - url: http://pyladies.cz/v1/s001-install/uvod.html
-#    title: Úvodní prezentace
-#    type: lesson
-  - lesson: beginners/cmdline
-  - lesson: beginners/install
-#  - lesson: beginners/venv-setup
-#  - lesson: beginners/first-steps
-  - lesson: beginners/install-editor
+  - lesson: beginners/install-replit
+  - lesson: beginners/first-steps
   - lesson: beginners/hello-world
+  - lesson: beginners/print
+  - lesson: beginners/variables
+  #- lesson: beginners/comparisons
+  #- lesson: beginners/and-or
+   # title: '(Bonus) "Nebo" anebo "a"'
+  #- lesson: beginners/expressions
+   # title: '(Doplnění) Vyhodnocování výrazů'
+  - lesson: beginners/install
+    title: "(Lokální instalace) Python"
+  - lesson: beginners/install-editor
+    title: "(Lokální instalace) Editor"
   - title: Tahák na klávesnici (PDF)
     url: https://pyvec.github.io/cheatsheets/keyboard/keyboard-cs.pdf
     type: cheatsheet
-  - title: Tahák na příkazovou řádku a první kroky v Pythonu (PDF)
-    url: https://s3-eu-west-1.amazonaws.com/messa-shared-files/2017/09/pyladies_2_lekce_tahak.pdf
-    type: cheatsheet
-  - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=install
-    type: homework
+  - title: Kódy z lekce (repl.it)
+    url: https://replit.com/@zitkat/Lekce-1-Prvni-program
+    type: link
 
-- title: Proměnné a porovnávání
-  slug: hello
-  date: 2022-09-27
-  materials:
-  - lesson: beginners/print
-  - lesson: beginners/variables
-  - lesson: beginners/comparisons
-  - lesson: beginners/and-or
-    title: '(Bonus) "Nebo" anebo "a"'
-  - lesson: beginners/expressions
-    title: '(Doplnění) Vyhodnocování výrazů'
-  - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=hello
-    type: homework
 
-- title: Cykly
-  date: 2022-10-04
+
+- title: Řídící struktury # vasek
+  date: 2022-11-15
   slug: cyk
   materials:
+    - lesson: beginners/comparisons
+    - lesson: beginners/and-or
+      title: '(Bonus) "Nebo" anebo "a"'
+    - lesson: beginners/expressions
+      title: '(Doplnění) Vyhodnocování výrazů'
     - lesson: beginners/for
+      title: Cyklus for
+    - lesson: beginners/while
+      title: Cyklus while
     - lesson: beginners/range
       title: '(Doplnění) Range - sekvence čísel'
-    - lesson: intro/turtle
-    - lesson: beginners/while
-    - lesson: beginners/reassignment
-    - title: Tahák s užitečnými funkcemi
+    #- lesson: intro/turtle
+    #- lesson: beginners/reassignment
+    #- title: Tahák s užitečnými funkcemi
       url: https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf
       type: cheatsheet
-    - title: Domácí projekty
-      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=cyk
-      type: homework
 
-- title: Funkce
+
+- title: Funkce # vasek
   slug: fun
-  date: 2022-10-11
+  date: 2022-11-24
   materials:
   - lesson: beginners/functions
   - lesson: beginners/basic-functions
   - lesson: beginners/def
   - lesson: beginners/local-variables
   - lesson: beginners/nested-traceback
-  - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=fun
-    type: homework
 
-- title: Soubory a řetězce
-  slug: str_fio
-  date: 2022-10-18
+
+- title: Ostatní knihovny a technologie # vasek + tomas
+  slug: other
+  date: 2022-12-01
   materials:
+    # co se nevešlo do ostatních lekcí:
+    # git a github
+    # java vs javascript vs c vs python
+    # databze
+    # docker
+    # aws
+    - lesson: git/install
+    - lesson: git/basics
+    - lesson: git/collaboration
+
+- title: Datové struktury a soubory # tomas
+  slug: str_fio
+  date: 2022-12-08
+  materials:
+
   - lesson: beginners/str
   - lesson: beginners/str-index-slice
   - lesson: beginners/str-methods
@@ -105,147 +104,33 @@ sessions:
   - title: 'Odkaz k lekci – Jane Austen: Pride and Prejudice'
     url: https://www.gutenberg.org/files/1342/1342-0.txt
     type: link
-  - title: Řetězcový tahák
-    url: https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf
-    type: cheatsheet
-  - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=str_fio
-    type: homework
 
-
-- title: Procvičování
-  slug: ex
-  date: 2022-10-25
-  materials:
-    - lesson: beginners/exceptions
-    - title: Odkaz k projektu – hiragana
-      url: http://pyladies.cz/v1/s006-lists/resources/hiragana.txt
-      type: link
-    - title: Odkaz k projektu – katakana
-      url: http://pyladies.cz/v1/s006-lists/resources/katakana.txt
-      type: link
-    - title: Odkaz k projektu – „日本語の表記体系” na japonské Wikipedii
-      url: http://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%A1%A8%E8%A8%98%E4%BD%93%E7%B3%BB
-      type: link
-    - title: Zadání projektu na lekci (PDF)
-      url: http://pyladies.cz/v1/s005-modules/handout/handout7.pdf
-      type: homework
-#    - title: Domácí projekty
-#      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=ex
-#      type: homework
-
-- title: Seznamy
-  slug: list
-  date: 2022-11-01
-  materials:
   - lesson: beginners/list
   - lesson: beginners/tuple
   - lesson: beginners/nested-list
   - lesson: beginners/zip-enumerate
-  - title: Tahák na seznamy
-    url: https://pyvec.github.io/cheatsheets/lists/lists-cs.pdf
+
+  - lesson: beginners/dict
+  - lesson: beginners/dict-with-list-values
+  - lesson: intro/json
+  - lesson: projects/github-api
+  - title: 'Odkaz k lekci – Vzorky (ZIP)'
+    url: http://home.zcu.cz/~zitkat/vzorky.zip
+    type: link
+  - title: Slovníkový tahák
+    url: https://pyvec.github.io/cheatsheets/dicts/dicts-cs.pdf
     type: cheatsheet
-  - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=list
-    type: homework
 
-- title: Slovníky
-  slug: dict
-  date: 2022-11-08
+  - title: Řetězcový tahák
+    url: https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf
+    type: cheatsheet
+
+- title: Projekt - Robomaster  # vasek + tomas
+  slug: project
+  date: 2022-12-15
   materials:
-    - lesson: beginners/dict
-    - lesson: beginners/dict-with-list-values
-    - lesson: intro/json
-    - lesson: projects/github-api
-    - title: 'Odkaz k lekci – Vzorky (ZIP)'
-      url: http://home.zcu.cz/~zitkat/vzorky.zip
-      type: link
-    - title: Slovníkový tahák
-      url: https://pyvec.github.io/cheatsheets/dicts/dicts-cs.pdf
-      type: cheatsheet
-    - title: Domácí projekty
-      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=dict
-      type: homework
-
-- title: Třídy
-  slug: class
-  date: 2022-11-15
-  materials:
-  - lesson: beginners/class
-  - lesson: beginners/inheritance
-  - title: Domácí projekty
-    url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=class
-    type: homework
-
-- title: Testování
-  slug: test
-  date: 2022-11-22
-  materials:
-    - lesson: beginners/exceptions
-    - lesson: beginners/modules
-    - lesson: beginners/debugging
-    - lesson: beginners/testing
-    - lesson: beginners/circular-imports
-    - title: Výjimkový tahák
-      url: https://pyvec.github.io/cheatsheets/exceptions/exceptions-cs.pdf
-      type: cheatsheet
-    - title: Domácí projekty
-      url: https://projekty.pyladies.cz/session?course=pyladies-2022-plzen-autumn&session=test
-      type: homework
-
-- title: Open-source a spolupráce
-  slug: foss
-  date: 2022-11-29
-  materials:
-  - lesson: git/install
-  - lesson: git/basics
-  - lesson: git/collaboration
-    url: https://pyvec.github.io/cheatsheets/basic-git/basic-git-cs.pdf
-
-#- title: Projekt I
-#  slug: proj1
-#  date: 2022-12-08
-#  materials:
-#  - lesson: intro/notebook
-#  - lesson: intro/numpy
-#  - lesson: intro/pandas
-
-#- base: git
-#  date: 2022-12-11
-#  materials:
-#    - lesson: git/install
-#    - lesson: git/basics
-#    - lesson: git/ignoring
-#    - title: Gitový tahák
-#      url: https://pyvec.github.io/cheatsheets/basic-git/basic-git-cs.pdf
-#      type: cheatsheet
-  #  - title: Domácí projekty (PDF)
-  #    url: http://pyladies.cz/v1/s003-looping/handout/handout3b.pdf
-  #    type: homework
-
-
-#- base: pyglet
-#  date: 2018-12-24
-#  materials:
-#  - lesson: intro/pyglet
-#  - title: Tahák na Pyglet
-#    url: https://pyvec.github.io/cheatsheets/pyglet/pyglet-basics-cs.pdf
-#    type: cheatsheet
-#  - lesson: projects/pong
-#    title: 'Praktické cvičení: Pong (bonus)'
-#  - title: Kód celé hry Pong
-#    type: link
-#    url: http://pyladies.cz/v1/s012-pyglet/pong.py
-#
-#- title: MicroPython
-#  slug: micropython
-#  date: 2018-12-25
-#  materials:
-#  - lesson: beginners/micropython
-#    type: lesson
-#  - title: Tahák na NodeMCU Devkit
-#    url: https://pyvec.github.io/cheatsheets/micropython/nodemcu-cs.pdf
-#    type: cheatsheet
+  # materiály
+  - lesson: projects/asteroids
 
 
 
