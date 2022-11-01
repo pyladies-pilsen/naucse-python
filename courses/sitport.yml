@@ -21,6 +21,7 @@ sessions:
   slug: hello
   date: 2022-11-10
   materials:
+  - lesson: beginners/install-replit
   - lesson: beginners/first-steps
   - lesson: beginners/hello-world
   - lesson: beginners/print
