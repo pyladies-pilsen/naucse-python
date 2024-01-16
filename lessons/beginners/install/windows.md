@@ -20,7 +20,6 @@ Třetí číslo za tečkou není tady podstatné.
   - Je verze `3.6` nebo novější? Výborně, máš instalaci hotovou!
   Okénko s příkazovou řádkou můžeš zavřít.
   Až ho budeš znovu potřebovat, můžeš otevřít nové.
-  Pokračuj dále [Nastavením prostředí]({{ lesson_url('beginners/venv-setup') }}).
 V opačném případě přejdi na [Stažení](#download)
 
 
