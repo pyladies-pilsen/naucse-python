@@ -1,5 +1,5 @@
 <h1 id="hledani_chyb">Hledání chyb
-<a href="#header-hledani_chyb" class="header-link">#</a>
+<a href="#hledani_chyb" class="header-link">#</a>
 </h1>
 <p>Jednou z klíčových vlastností vývojáře je umět najít a opravit defekt v programu. V programátorské hantýrce se tento proces nazývá jako <em>debugging</em>. Takový defekt (<strong>bug</strong>) totiž nutně nemusí být na první pohled vidět, dokonce nám ani nemusí způsobit výjimku, ale způsobí, že se náš program za určitých podmínek začne chovat nestandardně. Nestandardní chování programu pak může mít různě závažné důsledky.</p>
 <p>Typický postup při debuggingu je následující:</p>
@@ -11,7 +11,7 @@
 </ol>
 <p>Jeden z prvních nástrojů, který nám pomohl identifikovat, co máme v programu špatně, byla nezachycená výjimka a její popisná zpráva. <a href="naucse:page?lesson=beginners/print">Jak číst chyby</a> jsme probírali již v první lekci.</p>
 <h2 id="ladici_vypisy">Ladící výpisy
-<a href="#header-ladici_vypisy" class="header-link">#</a>
+<a href="#ladici_vypisy" class="header-link">#</a>
 </h2>
 <p>Další nástroj, se kterým jsi už určitě sama debuggovala, je funkce <code>print</code>. Funkce <code>print</code> je jednoduchá a rychlá metoda, jak získat náhled do toho, co se v programu děje. Tomuto vypisování dodatečných informací se říká <em>ladící výpisy</em>. Ty slouží čistě k tomu, aby nám umožnily pochopit kde přesně bug je a čím je způsoben. Obzvláště pokud je pro ladící výpisy použita funkce <code>print</code>, tyto výpisy by měly být odstraněny před používáním programu uživatelem. Zprávy z ladících výpisů nejsou pro běžného uživatele přínosné a tím pádem zhoršují použitelnost a čitelnost výstupu programu.
 Ukažme si to na následujícím programu, který od uživatele načte číslo, přičte k němu jedničku, vynásobí výsledek dvěmi a nakonec od něj odečte pětku. Výsledek vypíše uživateli.</p>
@@ -49,7 +49,7 @@ Výsledek je: 31 .
 Konec programu</code></pre></div><p>Z výpisu lze sice poznat, že chyba je v násobení dvěmi, nicméně program v takovém stavu nemůžu předat uživateli. Uživatele zajímá pouze výsledek a nikoliv mezivýpočty. To pro uživatele představuje zbytečné informace, ve kterých musí výsledek hledat.</p>
 <p>Ladící výpisy také mohou prozradit citlivá data, tedy data, se kterými sice náš program potřebuje pracovat, ale uživateli by je prozradit neměl a proto musíme dávat pozor, abychom je důkladně promazali.</p>
 <h2 id="logovani">Logování
-<a href="#header-logovani" class="header-link">#</a>
+<a href="#logovani" class="header-link">#</a>
 </h2>
 <p>Abychom neustále nemuseli myslet na mazání ladících printů a při každé chybě je vracet zase zpět, nabízí se zapisovat zprávy do souboru, tzv. <strong>logu</strong>. To nám umožňuje i výpisy uchovávat a vrátit se k nim, když problém zjistíme později. Nebo nám je může uživatel snadno zaslat a my vidíme, co se u uživatele dělo. Python nám za tímto účelem poskytuje šikovný modul <code>logging</code>, který se za nás postará o zapisování do souboru. Zároveň mu můžeme říct, aby nám ukládal jen důležité zprávy a zbytek ignoroval.</p>
 <p>Pojďme se podívat na možnou důležitost (<strong>level</strong>) zpráv a na co se daná důležistost (<strong>level</strong>) hodí.</p>
@@ -104,7 +104,7 @@ Konec programu</code></pre></div><p>Z výpisu lze sice poznat, že chyba je v n�
 <blockquote><p>Logování je důležité, ale je to jedna z věcí, na kterou je potřeba cit, který si člověk osvojí až praxí. Loguj moc a tvé logy budou nečitelné, loguj málo a informace budou nedostatečné. Nicméně si nedělej hlavu, pokud zrovna nevíš co použít za level, nebo co vlastně logovat. Prostě loguj.</p>
 </blockquote>
 <h2 id="debugger">Debugger
-<a href="#header-debugger" class="header-link">#</a>
+<a href="#debugger" class="header-link">#</a>
 </h2>
 <p>Ačkoliv jsou ladící výpisy užitečné, někdy je potřeba se uchýlit k sofistikovanějšímu nástroji. Ukažme si tedy, jak funguje debugovací nástroj v MuCode.
 Většina debugovacích nástrojů v jiných editorech funguje velmi podobně a existuje 

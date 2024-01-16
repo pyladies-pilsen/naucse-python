@@ -1,5 +1,5 @@
 <h1 id="moduly">Moduly
-<a href="#header-moduly" class="header-link">#</a>
+<a href="#moduly" class="header-link">#</a>
 </h1>
 <p>Modul je v Pythonu něco, z čeho můžeme importovat.
 Třeba z modulu <code>math</code> můžeš importovat funkci <code>sqrt</code>:</p>
@@ -29,7 +29,7 @@ zapomeň a importuj místo toho radši celý modul.
 Až začneš psát větší programy, zjednoduší ti
 to práci.</p>
 </div><h2 id="vlastni_moduly">Vlastní moduly
-<a href="#header-vlastni_moduly" class="header-link">#</a>
+<a href="#vlastni_moduly" class="header-link">#</a>
 </h2>
 <p>A teď to hlavní!
 Můžeš vytvořit vlastní importovatelný modul
@@ -49,13 +49,13 @@ Vytvoř soubor <code>louka.py</code> a do něj napiš:</p>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">louka</span><span class="o">.</span><span class="n">popis_stav</span><span class="p">())</span>
 </pre></div><p>a pak spusť:</p>
-<div class="highlight"><pre><span></span><span class="gp">$ </span>python vypis.py
+<div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>vypis.py
 </pre></div><p>Příkaz <code>import</code> hledá soubory (mimo jiné) v adresáři,
 ve kterém je „hlavní modul” programu – tedy soubor,
 který spouštíš (u nás <code>vypis.py</code>).
 Oba soubory by proto měly být ve stejném adresáři.</p>
 <h2 id="vedlejsi_efekty">Vedlejší efekty
-<a href="#header-vedlejsi_efekty" class="header-link">#</a>
+<a href="#vedlejsi_efekty" class="header-link">#</a>
 </h2>
 <p>Co přesně dělá příkaz <code>import louka</code>?</p>
 <p>Python najde příslušný soubor (<code>louka.py</code>) a provede v něm všechny příkazy,
@@ -84,7 +84,7 @@ Všimni si například, že <code>import turtle</code> neukáže okýnko – to 
 zavolání <code>turtle.forward()</code>.</p>
 <p>Příkaz <code>print</code> proto radši z modulu zase smaž.</p>
 <h3 id="kontrukce_code__main__code">Kontrukce <code>__main__</code>
-<a href="#header-kontrukce_code__main__code" class="header-link">#</a>
+<a href="#kontrukce_code__main__code" class="header-link">#</a>
 </h3>
 <p>K odstranění těchto nežádoucích efektů se používá speciální proměnná <code>__name__</code>,
 kterou má každý modul nastavnou při svém běhu.
@@ -94,7 +94,7 @@ Proto se používá konstrukce:</p>
 <div class="highlight"><pre><span></span><span class="c1"># soubor s názvem start.py</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Hlavní funkce.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Hlavní funkce.&quot;&quot;&quot;</span>
     <span class="c1"># tady je začátek tvého kódu</span>
     <span class="o">...</span>
 
@@ -103,7 +103,7 @@ Proto se používá konstrukce:</p>
 </pre></div><p>Pokud tento soubor importuješ, proměnná <code>__main__</code> bude mít hodnotu <code>'start'</code>, 
 a funkce main se nespustí.</p>
 <h2 id="adresar_pro_kazdy_projekt">Adresář pro každý projekt
-<a href="#header-adresar_pro_kazdy_projekt" class="header-link">#</a>
+<a href="#adresar_pro_kazdy_projekt" class="header-link">#</a>
 </h2>
 <p>Od teď budeš občas psát větší projekty,
 které budou obsahovat více souvisejících souborů.
